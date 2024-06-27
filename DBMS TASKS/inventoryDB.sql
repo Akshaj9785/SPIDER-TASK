@@ -1,3 +1,4 @@
+SET SQL_SAFE_UPDATES=0;
 CREATE DATABASE inventoryDB;
 USE inventoryDB;
 CREATE TABLE products (
