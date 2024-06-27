@@ -13,10 +13,10 @@ INSERT INTO products (name, description, price, quantity, category) VALUES
 ('Product1', 'Description of product 1', 100.00, 50, 'Category1'),
 ('Product2', 'Description of product 2', 200.00, 30, 'Category2'),
 ('Product3', 'Description of product 3', 150.00, 20, 'Category3');
-('Product4', 'Description of product 4', 250.00, 10, 'Category4');
-('Product5', 'Description of product 5', 300.00, 60, 'Category5');
 SELECT * FROM products;
 SELECT * FROM products WHERE price < 150.00;
 SELECT * FROM products WHERE quantity > 25;
 UPDATE products SET price = 120.00 WHERE name = 'Product1';
+SELECT * FROM products;
 DELETE FROM products WHERE name = 'Product3';
+SELECT * FROM products;
