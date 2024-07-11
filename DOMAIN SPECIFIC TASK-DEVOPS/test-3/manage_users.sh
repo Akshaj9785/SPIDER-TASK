@@ -7,7 +7,7 @@ while IFS=',' read username group permission
 do    
     dscl . -create "/Users/$username"
     mkdir -p  "/Users/$username"
-    if ! dscl . -read "/Groups/$group" 2>/dev/null ; then
+    if ! dscl . -read "/Groups/$group" >/dev/null ; then
         dscl . -create "/Groups/$group"
     fi
     dscl . -append "/Groups/$group" GroupMembership "$username"
