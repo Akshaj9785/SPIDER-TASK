@@ -1,13 +1,13 @@
 #!/bin/bash
 if [ ! -f "usernames.csv" ]; then
-    echo "usernames.csv file not found" 1>&2
+    echo "usernames.csv file not found"
     exit 1
 fi
 while IFS=',' read username group permission
 do    
     dscl . -create "/Users/$username"
     mkdir -p  "/Users/$username"
-    if ! dscl . -read "/Groups/$group" >/dev/null 2>&1; then
+    if ! dscl . -read "/Groups/$group" >/dev/null; then
         dscl . -create "/Groups/$group"
     fi
     dscl . -append "/Groups/$group" GroupMembership "$username"
