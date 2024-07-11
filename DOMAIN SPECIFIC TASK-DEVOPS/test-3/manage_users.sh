@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ ! -f "usernames.csv" ]; then
+    echo "usernames.csv file not found" 1>&2
+    exit 1
+fi
 while IFS=',' read username group permission
 do    
     dscl . -create "/Users/$username"
