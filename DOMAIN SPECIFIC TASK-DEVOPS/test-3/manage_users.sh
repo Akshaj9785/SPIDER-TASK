@@ -14,7 +14,7 @@ do
     chmod "$permission" "/Users/$username"
     mkdir -p  "/Users/$username/projects"
     echo "Welcome, $username! This is your projects directory." > "/Users/$username/projects/README.md"
-    chown -R "$username:$group" "/Users/$username"
+    chown -R "$username:$group" "/Users/$username/projects"
     echo "User $username created successfully with group $group and permission $permission"
 done < usernames.csv
 
