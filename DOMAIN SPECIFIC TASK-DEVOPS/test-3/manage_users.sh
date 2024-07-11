@@ -17,6 +17,7 @@ do
     chown -R "$username:$group" "/Users/$username"
     echo "User $username created successfully with group $group and permission $permission"
 done < usernames.csv
+
 echo "User management process completed"
 
 
